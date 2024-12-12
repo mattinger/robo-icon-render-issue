@@ -1,10 +1,13 @@
 package com.inger.iconsnapshotissue
 
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.runComposeUiTest
+import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.github.takahirom.roborazzi.RoborazziOptions
 import com.github.takahirom.roborazzi.RoborazziRule
@@ -35,6 +38,7 @@ class IconSnapshotIssue {
         runComposeUiTest {
             setContent {
                 Icon(
+                    modifier = Modifier.size(64.dp),
                     painter = painterResource(R.drawable.cl_ic_bluetooth_outline),
                     contentDescription = null
                 )
